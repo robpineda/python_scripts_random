@@ -13,7 +13,7 @@ def svgs_to_pdf(folder_path, output_pdf='output.pdf'):
     # Create a PDF canvas
     c = canvas.Canvas(output_pdf)
     
-    # Set page size based on your manifest (533x723 pixels)
+    # Set page size based on the svgs manifest (in this case 533x723 pixels)
     width, height = 533, 723  # Adjust if needed
     
     for svg_file in svg_files:
@@ -23,7 +23,7 @@ def svgs_to_pdf(folder_path, output_pdf='output.pdf'):
         # Convert SVG to ReportLab drawing
         drawing = svg2rlg(svg_path)
         if drawing:
-            # Scale to fit page if necessary (optional)
+            # Scale to fit page
             drawing.width, drawing.height = width, height
             # Add to PDF
             renderPDF.draw(drawing, c, 0, 0)
@@ -36,5 +36,5 @@ def svgs_to_pdf(folder_path, output_pdf='output.pdf'):
     print(f'Merged {len(svg_files)} pages into {output_pdf}')
 
 if __name__ == '__main__':
-    folder_path = '/Users/robertopineda/Downloads/korean_book'  # Adjust to your SVG folder
-    svgs_to_pdf(folder_path, 'korean_book.pdf')
+    folder_path = '/Users/username/folder'  # Path to the folder containing the svg files
+    svgs_to_pdf(folder_path, 'book.pdf') # Name your exported pdf

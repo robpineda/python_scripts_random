@@ -2,8 +2,8 @@ import os
 import datetime
 
 # Specify the root directory of your Android project
-PROJECT_DIR = "/Users/robertopineda/Documents/Apps/koekoi"  # Replace with your project folder path
-OUTPUT_FILE = f"/Users/robertopineda/Documents/Apps/python_scripts/output/android_project_code_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+PROJECT_DIR = "/Users/username/project"  # Replace with your project folder path
+OUTPUT_FILE = f"/Users/username/output/android_project_code_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
 
 # File extensions to include (common Android project files)
 INCLUDED_EXTENSIONS = (".java", ".kt", ".xml", ".gradle", ".json", ".yml", ".yaml")
